@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>美团</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/js.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="img/ceiling-logo2.png" alt="">
+    <div>
+      <input type="text" placeholder="请输入要查找的">
+      <span>搜索</span>
+    </div>
+  </header>
+  <h3 onclick="showAndHidden()">我的购物车（<span id="count">0</span>）</h3>
+  <section id="content">
+    <div>
+      <img src="img/1cde.jpg" alt="">
+      <p>
+        <span>A汉堡包</span>
+        <span>16元/份</span>
+      </p>
+      <p>
+        月销售30单
+      </p>
+      <p>
+        <span>10元起送</span>
+        <span>免配送费</span>
+        <span>45min</span>
+      </p>
+      <p>
+        <input type="button" value="加入购物车" onclick="addFood(this)">
+      </p>
+    </div>
+    <div>
+      <img src="img/3a31d.jpg" alt="">
+      <p>
+        <span>杨记录小厨师</span>
+        <span>19元/份</span>
+      </p>
+      <p>
+        月销售30单
+      </p>
+      <p>
+        <span>10元起送</span>
+        <span>免配送费</span>
+        <span>45min</span>
+      </p>
+      <p>
+        <input type="button" value="加入购物车" onclick="addFood(this)">
+      </p>
+    </div>
+    <div>
+      <img src="img/b53a0f.jpg" alt="">
+      <p>
+        <span>鸡米饭</span>
+        <span>26元/份</span>
+      </p>
+      <p>
+        月销售30单
+      </p>
+      <p>
+        <span>10元起送</span>
+        <span>免配送费</span>
+        <span>45min</span>
+      </p>
+      <p>
+        <input type="button" value="加入购物车" onclick="addFood(this)">
+      </p>
+    </div>
+    <div>
+      <img src="img/d64c553.jpg" alt="">
+      <p>
+        <span>烤肉拌饭</span>
+        <span>70.9元/份</span>
+      </p>
+      <p>
+        月销售30单
+      </p>
+      <p>
+        <span>10元起送</span>
+        <span>免配送费</span>
+        <span>45min</span>
+      </p>
+      <p>
+        <input type="button" value="加入购物车" onclick="addFood(this)">
+      </p>
+    </div>
+  </section>
+  <article id="foodCar" style="display: none">
+    <table id="car">
+      <tr>
+        <th>
+          全选
+          <input type="checkbox" id="all" onclick="setAll(this)">
+        </th>
+        <th>菜品</th>
+        <th>价格</th>
+        <th>操作</th>
+      </tr>
+    </table>
+    <p>
+      <input type="button" value="全部删除" onclick="deleteSelectFood()" id="se">
+      <span>
+        合计<b id="money"></b>
+        <input type="button" value="结算" onclick="pay()">
+      </span>
+    </p>
+    <b onclick="show()">点击这里继续点餐</b>
+  </article>
+</body>
+
+</html>
